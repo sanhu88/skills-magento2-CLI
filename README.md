@@ -689,21 +689,21 @@ bin/magento dev:xml:convert
 ```
 
 ```bash
-
-# 
-bin/magento 
+dotdigital
+# 类似ERP 云端软件，$400/mo
 ```
 
 ```bash
-
-# 
-bin/magento 
+downloadable
+# 非重点业务范围 skip
 ```
 
-```bash
+## encryption
 
-# 
-bin/magento 
+```bash
+encryption:payment-data:update
+# 使用最新加密方法重新加密信用卡数据
+bin/magento encryption:payment-data:update
 ```
 
 ````bash
