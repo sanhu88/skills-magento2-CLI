@@ -706,6 +706,46 @@ encryption:payment-data:update
 bin/magento encryption:payment-data:update
 ```
 
+## i18n
+
+```bash
+i18n:uninstall
+# 卸载语言包，形参 语言包名称
+bin/magento i18n:uninstall
+```
+
+```bash
+i18n:pack
+# 保存语言包，两个形参
+bin/magento i18n:pack
+Usage:
+  i18n:pack [options] [--] <source> <locale>
+
+Arguments:
+  source                  Path to source dictionary file with translations
+  locale                  Target locale for dictionary, for example "de_DE"
+```
+
+```bash
+i18n:collect-phrases
+# 在代码库探索短语，一个词典形参
+bin/magento i18n:collect-phrases
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+
+
 ````bash
 
 ```bash
