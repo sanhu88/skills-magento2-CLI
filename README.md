@@ -554,6 +554,7 @@ Crontab has been generated and saved
 cron:remove
 # 移除定时任务
 bin/magento cron:remove
+Magento cron tasks have been removed
 ```
 
 ```bash
@@ -564,22 +565,28 @@ Ran jobs by schedule.
 # 服务器荷载
 ```
 
-```bash
+## customer
 
-# 
-bin/magento 
+```bash
+customer:hash:upgrade
+# 按照最新的算法升级客户的hash according 散列显示
+bin/magento customer:hash:upgrade
+Finished
+```
+
+## *deploy
+
+```bash
+deploy:mode:show
+# 显示当程序模式
+bin/magento deploy:mode:show
+Current application mode: developer. (Note: Environment variables may override this value.)
 ```
 
 ```bash
-
-# 
-bin/magento 
-```
-
-```bash
-
-# 
-bin/magento 
+deploy:mode:set
+# 设置程序模式 Available options are "developer" or "production"
+bin/magento deploy:mode:set
 ```
 
 ```bash
