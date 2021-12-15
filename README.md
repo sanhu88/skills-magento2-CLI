@@ -316,3 +316,29 @@ bin/magento admin:user:unlock Burt
 The user account "Burt" was not locked or could not be unlocked
 ~~~
 
+## app
+
+~~~bash
+app:config:dump
+# 备份程序设置
+bin/magento app:config:dump
+Shared configuration was written to config.php and system-specific configuration to env.php.
+Shared configuration file (config.php) doesn't contain sensitive data for security reasons.
+Sensitive data can be stored in the following environment variables:
+CONFIG__DEFAULT__PAYMENT__PAYFLOWPRO__PARTNER for payment/payflowpro/partner
+...
+Done. Config types dumped: scopes, themes, system, i18n
+~~~
+
+~~~bash
+app:config:import
+# 从分享的配置文件导入appropriate相对应的数据存储
+~~~
+
+~~~bash
+app:config:status
+# 检查配置
+bin/magento app:config:status
+Config files are up to date.
+~~~
+
