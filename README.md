@@ -342,3 +342,17 @@ bin/magento app:config:status
 Config files are up to date.
 ~~~
 
+## braintree
+
+~~~bash
+braintree:migrate
+# 从M1的数据库迁移以保存的信用卡
+bin/magento braintree:migrate
+
+Database host/IP address:127.0.0.1
+Database name:m243_dev
+Database username:
+Database user password:
+
+~~~
+
