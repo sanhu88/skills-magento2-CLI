@@ -539,7 +539,29 @@ Configuration path for example group/section/field_name
 config:set
 # 改变系统设定，形参 "path, value"
 bin/magento config:set
+```
 
+## cron
+
+```bash
+cron:install
+# 为当前用户生成并安装定时任务
+bin/magento cron:install
+Crontab has been generated and saved
+```
+
+```bash
+cron:remove
+# 移除定时任务
+bin/magento cron:remove
+```
+
+```bash
+cron:run
+# 按照计划运行定时任务
+bin/magento cron:run
+Ran jobs by schedule.
+# 服务器荷载
 ```
 
 ```bash
@@ -554,9 +576,44 @@ bin/magento
 bin/magento 
 ```
 
-> \ ```bash
->
-> # 
-> bin/magento 
->
-> \ ```
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
