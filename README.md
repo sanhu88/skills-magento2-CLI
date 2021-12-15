@@ -494,30 +494,52 @@ Current status:
 catalog:images:resize
 # 调整产品图片
 bin/magento catalog:images:resize
+801/801 [============================] 100% 28 mins 128.5 MiB   | /w/s/wsh12-red_main_1.jpg
+Product images resized successfully
 ```
 
 ```bash
 catalog:product:attributes:cleanup
 # 移除未使用的产品属性
 bin/magento catalog:product:attributes:cleanup
+Unused product attributes successfully cleaned up:
+  catalog_product_entity_text
+  catalog_product_entity_decimal
+  catalog_product_entity_datetime
+  catalog_product_entity_int
+  catalog_product_entity_varchar
+```
+
+## cms
+
+```bash
+cms:wysiwyg:restrict
+# 设置是强制用户HTML内容验证还是显示警告
+bin/magento cms:wysiwyg:restrict
+```
+
+## config
+
+~~~bash
+config:show
+# 
+bin/magento config:show
+# web/unsecure/base_url - http://m243.com/
+# 系统所有的配置值
+~~~
+
+```bash
+config:sensitive:set
+# 设置敏感配置项的值
+bin/magento config:sensitive:set
+Configuration path for example group/section/field_name
 ```
 
 ```bash
+config:set
+# 改变系统设定，形参 "path, value"
+bin/magento config:set
 
-# 
-bin/magento 
-```
-
-```bash
-
-# 
-bin/magento 
-```
-
-```bash
-
-# 
-bin/magento 
 ```
 
 ```bash
