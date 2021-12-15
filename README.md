@@ -496,6 +496,7 @@ catalog:images:resize
 bin/magento catalog:images:resize
 801/801 [============================] 100% 28 mins 128.5 MiB   | /w/s/wsh12-red_main_1.jpg
 Product images resized successfully
+# 耗时较久
 ```
 
 ```bash
@@ -589,10 +590,102 @@ deploy:mode:set
 bin/magento deploy:mode:set
 ```
 
-```bash
+## dev
 
-# 
-bin/magento 
+```bash
+dev:di:info
+# 提供关于该命令的依赖注入配置的信息，形参"class"
+bin/magento dev:di:info
+```
+
+```bash
+dev:profiler:disable
+# 关闭分析器
+bin/magento dev:profiler:disable
+Profiler disabled.
+```
+
+```bash
+dev:profiler:enable 
+# 启用分析器，每个页面的下方显示表格
+bin/magento dev:profiler:enable 
+Profiler enabled with html output.
+
+bin/magento dev:profiler:enable csvfile
+# 文件保存在<project_root>/var/log/profiler.csv
+```
+
+[Profiling Magento](https://devdocs.magento.com/guides/v2.4/config-guide/bootstrap/mage-profiler.html)
+
+```bash
+dev:query-log:disable
+# 关闭数据库查询日志
+bin/magento dev:query-log:disable
+DB query logging disabled.
+```
+
+```bash
+dev:query-log:enable 
+# 开启数据库查询日志
+bin/magento dev:query-log:enable 
+DB query logging enabled.
+# 文件保存在var/debug/db.log
+```
+
+```bash
+dev:source-theme:deploy
+# 从主题里收集并发布源文件  to create symlinks to LESS files
+bin/magento dev:source-theme:deploy
+# Warning: symlink() has been disabled for security reasons
+
+```
+
+> 与steup:static-content:deply 区别
+>
+> [stack-exchange](https://magento.stackexchange.com/questions/247533/cli-what-is-the-difference-between-setupstatic-contentdeploy-and-devsourc)
+
+```bash
+dev:template-hints:status
+# 前台主题提示状态
+bin/magento dev:template-hints:status
+Template hints are disabled
+```
+
+```bash
+dev:template-hints:disable
+# 关闭主题提示
+bin/magento dev:template-hints:disable
+Template hints disabled. Refresh cache types
+```
+
+```bash
+dev:template-hints:enable
+# 开启主题提示
+bin/magento dev:template-hints:enable
+Template hints enabled.
+```
+
+```bash
+dev:tests:run
+# 运行测试
+bin/magento dev:tests:run
+# Warning: passthru() has been disabled for security reasons
+```
+
+```bash
+dev:urn-catalog:generate
+# 编辑器PhpStorm and Visual Studio Code，避免语法报错，URNs转成XSDs标准
+bin/magento dev:urn-catalog:generate
+```
+
+> dev:urn-catalog:generate
+>
+> [Magento link](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-urn.html)
+
+```bash
+dev:xml:convert 
+# 转换XML为XSL风格表单
+bin/magento dev:xml:convert 
 ```
 
 ```bash
@@ -613,14 +706,11 @@ bin/magento
 bin/magento 
 ```
 
-```bash
-
-# 
-bin/magento 
-```
+````bash
 
 ```bash
 
 # 
 bin/magento 
 ```
+````
