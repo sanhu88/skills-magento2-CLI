@@ -356,3 +356,185 @@ Database user password:
 
 ~~~
 
+## *cache
+
+~~~bash
+cache:clean
+# 清空制定类型的缓存，不带参数就是全部
+bin/magento cache:clean
+Cleaned cache types:
+config
+layout
+block_html
+collections
+reflection
+db_ddl
+compiled_config
+eav
+customer_notification
+config_integration
+config_integration_api
+full_page
+config_webservice
+translate
+vertex
+~~~
+
+~~~bash
+cache:disable
+# 禁用缓存
+bin/magento cache:disable
+Changed cache status:
+                        config: 1 -> 0
+                        layout: 1 -> 0
+                    block_html: 1 -> 0
+                   collections: 1 -> 0
+                    reflection: 1 -> 0
+                        db_ddl: 1 -> 0
+               compiled_config: 1 -> 0
+                           eav: 1 -> 0
+         customer_notification: 1 -> 0
+            config_integration: 1 -> 0
+        config_integration_api: 1 -> 0
+                     full_page: 1 -> 0
+             config_webservice: 1 -> 0
+                     translate: 1 -> 0
+                        vertex: 1 -> 0
+~~~
+
+~~~bash
+cache:enable
+# 开启缓存，并清空
+bin/magento cache:enable
+Changed cache status:
+                        config: 0 -> 1
+                        layout: 0 -> 1
+                    block_html: 0 -> 1
+                   collections: 0 -> 1
+                    reflection: 0 -> 1
+                        db_ddl: 0 -> 1
+                           eav: 0 -> 1
+         customer_notification: 0 -> 1
+            config_integration: 0 -> 1
+        config_integration_api: 0 -> 1
+                     full_page: 0 -> 1
+             config_webservice: 0 -> 1
+                     translate: 0 -> 1
+                        vertex: 0 -> 1
+Cleaned cache types:
+config
+layout
+block_html
+collections
+reflection
+db_ddl
+eav
+customer_notification
+config_integration
+config_integration_api
+full_page
+config_webservice
+translate
+vertex
+
+~~~
+
+~~~bash
+cache:flush
+# 冲刷缓存
+bin/magento cache:flush
+Flushed cache types:
+config
+layout
+block_html
+collections
+reflection
+db_ddl
+compiled_config
+eav
+customer_notification
+config_integration
+config_integration_api
+full_page
+config_webservice
+translate
+vertex
+
+~~~
+
+>  the main difference between Cache clean and cache flush in Magento 2 is that cache:clean will wipe all the enabled items which are Magento-related, and cache:flush wipes out the cache storage.
+>
+> ​	-- [link](https://magecomp.com/blog/magento-2-difference-between-cache-clean-cache-flush/#Difference_Between_Magento_2_Cache_Clean_Cache_Flush)
+
+```bash
+cache:status
+# 检查缓存状态
+bin/magento cache:status
+Current status:
+                        config: 1
+                        layout: 1
+                    block_html: 1
+                   collections: 1
+                    reflection: 1
+                        db_ddl: 1
+               compiled_config: 1
+                           eav: 1
+         customer_notification: 1
+            config_integration: 1
+        config_integration_api: 1
+                     full_page: 1
+             config_webservice: 1
+                     translate: 1
+                        vertex: 1
+```
+
+## catalog
+
+```bash
+catalog:images:resize
+# 调整产品图片
+bin/magento catalog:images:resize
+```
+
+```bash
+catalog:product:attributes:cleanup
+# 移除未使用的产品属性
+bin/magento catalog:product:attributes:cleanup
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+> \ ```bash
+>
+> # 
+> bin/magento 
+>
+> \ ```
