@@ -732,10 +732,98 @@ i18n:collect-phrases
 bin/magento i18n:collect-phrases
 ```
 
-```bash
+## *indexer
 
-# 
-bin/magento 
+[Magento link](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-index.html)
+
+```bash
+indexer:status
+# 表格形式展示索引状态，展示结果包含indexer:info 
+bin/magento indexer:status
+```
+
+```bash
+indexer:info 
+# 对应关系ID 和Title
+bin/magento indexer:info 
+design_config_grid                       Design Config Grid
+customer_grid                            Customer Grid
+catalog_category_product                 Category Products
+catalog_product_category                 Product Categories
+catalogrule_rule                         Catalog Rule Product
+catalog_product_attribute                Product EAV
+inventory                                Inventory
+catalogrule_product                      Catalog Product Rule
+cataloginventory_stock                   Stock
+catalog_product_price                    Product Price
+catalogsearch_fulltext                   Catalog Search
+```
+
+```bash
+indexer:show-mode
+# 显示索引模式
+bin/magento indexer:show-mode
+Design Config Grid:                                Update on Save
+Customer Grid:                                     Update on Save
+Category Products:                                 Update on Save
+Product Categories:                                Update on Save
+Catalog Rule Product:                              Update on Save
+Product EAV:                                       Update on Save
+Inventory:                                         Update on Save
+Catalog Product Rule:                              Update on Save
+Stock:                                             Update on Save
+Product Price:                                     Update on Save
+Catalog Search:                                    Update on Save
+```
+
+```bash
+indexer:set-mode
+# 设定索引模式，两个形参 mode are 'realtime' or 'schedule'和index ID
+bin/magento indexer:set-mode
+```
+
+```bash
+indexer:show-dimensions-mode
+# catalog_product_price 的mode
+bin/magento indexer:show-dimensions-mode
+Product Price:                                     none
+```
+
+```bash
+indexer:set-dimensions-mode
+# 修改 catalog_product_price 的mode，两个形参，一个catalog_product_price，第二个选项。
+# 主要用来价格排序
+bin/magento indexer:set-dimensions-mode
+Usage:
+  indexer:set-dimensions-mode [<indexer> [<mode>]]
+
+Arguments:
+  indexer               Indexer name [catalog_product_price]
+  mode                  Indexer dimension modes
+                        catalog_product_price          none,website,customer_group,website_and_customer_group
+```
+
+```bash
+indexer:reindex
+# 从新创建索引
+bin/magento indexer:reindex
+```
+
+```bash
+indexer:reset
+# 重置索引，把索引设置为无效状态
+bin/magento indexer:reset
+Design Config Grid indexer has been invalidated.
+Customer Grid indexer has been invalidated.
+Category Products indexer has been invalidated.
+Product Categories indexer has been invalidated.
+Catalog Rule Product indexer has been invalidated.
+Product EAV indexer has been invalidated.
+Inventory indexer has been invalidated.
+Catalog Product Rule indexer has been invalidated.
+Stock indexer has been invalidated.
+Product Price indexer has been invalidated.
+Catalog Search indexer has been invalidated.
 ```
 
 ```bash
@@ -744,10 +832,13 @@ bin/magento
 bin/magento 
 ```
 
+```bash
 
+# 
+bin/magento 
+```
 
 ````bash
-
 ```bash
 
 # 
