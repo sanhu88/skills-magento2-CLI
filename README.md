@@ -1068,6 +1068,50 @@ Help:
 
 ```
 
+```bash
+remote-storage:sync
+# Synchronize media files with remote storage.
+bin/magento remote-storage:sync
+```
+
+## sampledata
+
+```bash
+sampledata:remove
+# 从composer.json移除 sample数据文件包
+bin/magento sampledata:remove
+```
+
+```bash
+sampledata:reset
+# 重置所有数据包为再次安装做准备
+bin/magento sampledata:reset
+```
+
+```bash
+sampledata:deploy
+# 安装sample数据模组
+bin/magento sampledata:deploy
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
 ````bash
 ```bash
 
