@@ -826,6 +826,104 @@ Product Price indexer has been invalidated.
 Catalog Search indexer has been invalidated.
 ```
 
+## info
+
+```bash
+info:adminuri
+# 后台admin URI
+bin/magento info:adminuri
+Admin URI: /admin_ipzz2r
+```
+
+```bash
+info:language:list
+# 语言列表和code 表格
+bin/magento info:language:list
+# zh_Hans_CN
+# en_US
+```
+
+```bash
+info:timezone:list
+# 时区列表和code 表格
+bin/magento info:timezone:list
+# Asia/Shanghai 
+# Pacific Standard Time (America/Los_Angeles) America/Los_Angeles
+```
+
+```bash
+info:backups:list
+# 可用的备份文件
+bin/magento info:backups:list
+No backup files found.
+```
+
+```bash
+info:currency:list 
+# 货币列表和code 表格
+bin/magento info:currency:list 
+```
+
+```bash
+info:dependencies:show-framework 
+# 根目录framework-dependencies.csv 依赖Magento框架的数量
+bin/magento info:dependencies:show-framework 
+```
+
+```bash
+info:dependencies:show-modules
+# 根目录modules-dependencies.csv 模块之间的依赖关系
+bin/magento info:dependencies:show-modules
+```
+
+```bash
+info:dependencies:show-modules-circular
+# 根目录modules-circular-dependencies.csv 循环依赖关系
+bin/magento info:dependencies:show-modules-circular
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
 ```bash
 
 # 
