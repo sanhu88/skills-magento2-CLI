@@ -953,7 +953,54 @@ Synchronizing assets information from media storage to database...
 Completed assets synchronization.
 ```
 
+## *module
 
+```bash
+module:status
+# 模块状态
+bin/magento module:status
+List of enabled modules:
+...
+List of disabled modules:
+...
+```
+
+```bash
+module:config:status
+# 检查app/etc/config.php模块设置
+bin/magento module:config:status
+The modules configuration is up to date.
+```
+
+```bash
+module:disable 
+# 禁用模块，形参
+bin/magento module:disable 
+```
+
+```bash
+module:enable
+# 开启模块，形参
+bin/magento module:enable
+```
+
+```bash
+module:uninstall 
+# 卸载模块，形参
+bin/magento module:uninstall 
+Arguments:
+  module                                         Name of the module
+
+Options:
+  -r, --remove-data                              Remove data installed by module(s)
+      --backup-code                              Take code and configuration files backup (excluding temporary files)
+      --backup-media                             Take media backup
+      --backup-db                                Take complete database backup
+      --non-composer                             All modules, that will be past here will be non composer based
+  -c, --clear-static-content                     Clear generated static view files. Necessary, if the module(s) have static view files
+      --magento-init-params=MAGENTO-INIT-PARAMS  Add to any command to customize Magento initialization parameters
+                                                 For example: "MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache"
+```
 
 ```bash
 
