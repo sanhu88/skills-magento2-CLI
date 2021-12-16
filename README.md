@@ -882,16 +882,23 @@ info:dependencies:show-modules-circular
 bin/magento info:dependencies:show-modules-circular
 ```
 
-```bash
+## inventory
 
-# 
-bin/magento 
+```bash
+inventory:reservation:create-compensations
+# Create reservations by provided compensation arguments
+# 通过提供的补偿论据创建保留？
+bin/magento inventory:reservation:create-compensations
 ```
 
 ```bash
-
-# 
-bin/magento 
+inventory:reservation:list-inconsistencies
+# 显示所有产品可售数量不一致
+bin/magento inventory:reservation:list-inconsistencies
+Order 000000001:
+  - Product WS03-XS-Red should be compensated by -1.000000 for stock 1
+Order 000000002:
+  - Product WS08-XS-Blue should be compensated by -1.000000 for stock 1
 ```
 
 ```bash
