@@ -902,33 +902,37 @@ Order 000000002:
 ```
 
 ```bash
+inventory-geonames:import
+# 下载并导入地理名称，用于来源选择算法？
+bin/magento inventory-geonames:import
+```
 
-# 
-bin/magento 
+## maintenance
+
+```bash
+maintenance:status
+# 维护状态
+bin/magento maintenance:status
+Status: maintenance mode is not active
+List of exempt IP-addresses: none
 ```
 
 ```bash
-
-# 
-bin/magento 
+maintenance:allow-ips
+# 添加 清除允许IP
+bin/magento maintenance:allow-ips
 ```
 
 ```bash
-
-# 
-bin/magento 
+maintenance:enable 
+# 开启维护状态
+bin/magento maintenance:enable 
 ```
 
 ```bash
-
-# 
-bin/magento 
-```
-
-```bash
-
-# 
-bin/magento 
+maintenance:disable
+# 关闭维护状态
+bin/magento maintenance:disable
 ```
 
 ```bash
