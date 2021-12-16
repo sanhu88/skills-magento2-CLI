@@ -976,6 +976,7 @@ The modules configuration is up to date.
 module:disable 
 # 禁用模块，形参
 bin/magento module:disable 
+bin/magento module:disable --clear-static-content
 ```
 
 ```bash
@@ -1090,7 +1091,7 @@ bin/magento sampledata:reset
 
 ```bash
 sampledata:deploy
-# 安装sample数据模组
+# 部署sample数据模组
 bin/magento sampledata:deploy
 ```
 
@@ -1106,6 +1107,185 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 security:recaptcha:disable-for-user-login 
 # 关闭admin登陆的验证码
 bin/magento security:recaptcha:disable-for-user-login 
+```
+
+## *setup
+
+```bash
+setup:static-content:deploy
+# 部署静态view 文件
+bin/magento setup:static-content:deploy -f
+Deploy using quick strategy
+frontend/Magento/blank/en_US            2265/2265           ============================ 100%   < 1 sec
+adminhtml/Magento/backend/en_US         2915/2915           ============================ 100%   1 sec
+frontend/Magento/luma/en_US             2281/2281           ============================ 100%   1 sec
+Execution time: 6.6236588954926
+```
+
+```bash
+setup:di:compile
+# 生成DI配置，missing的类可以自动生成
+bin/magento setup:di:compile
+Compilation was started.
+Plugin list generation... 9/9 [============================] 100% 1 min 438.0 MiB
+Generated code and dependency injection configuration successfully.
+```
+
+```bash
+setup:upgrade
+# 升级Magento 程序application 数据库数据，结构schema
+bin/magento setup:upgrade
+Cache types config flushed successfully
+Cache cleared successfully
+File system cleanup:
+...
+Updating modules:
+Cache cleared successfully
+Schema creation/updates:
+...
+Schema post-updates:
+...
+Enabling caches:
+Current status:
+layout: 1
+block_html: 1
+full_page: 1
+Nothing to import.
+Media files stored outside of 'Media Gallery Allowed' folders will not be available to the media gallery.
+Please refer to Developer Guide for more details.
+
+```
+
+```bash
+setup:uninstall
+# 卸载 Magento application
+bin/magento setup:uninstall
+```
+
+```bash
+setup:install
+# 安装 Magento application
+bin/magento setup:install
+```
+
+```bash
+setup:rollback 
+# 回滚 Magento Application codebase, media and database
+bin/magento setup:rollback 
+```
+
+```bash
+setup:performance:generate-fixtures 
+# 生成 fixtures 固定资产？，形参 "profile"
+bin/magento setup:performance:generate-fixtures 
+bin/magento setup:performance:generate-fixtures setup/performance-toolkit/profiles/ce/small.xml
+Generating profile with following params:
+ |- Admin Users: 50
+ |- Websites: 1
+ |- Store Groups Count: 1
+ |- Store Views Count: 1
+ |- Categories: 30
+ |- Attribute Sets (Default): 3
+ |- Attribute Sets (Extra): 10
+ |- Simple products: 800
+ |- Configurable products: 16
+ |- Product images: 100, 3 per product
+ |- Customers: 200
+ |- Cart Price Rules: 20
+ |- Catalog Price Rules: 20
+ |- Coupon Codes: 20
+ |- Orders: 80
+Config Changes...  done in 00:00:00
+SQLSTATE[HY000]: General error: 1419 You do not have the SUPER privilege and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable), query was: CREATE TRIGGER trg_catalog_category_entity_after_insert AFTER INSERT ON catalog_category_entity FOR EACH ROW
+BEGIN
+INSERT IGNORE INTO `catalog_category_product_cl` (`entity_id`) VALUES (NEW.`entity_id`);
+END
+
+# https://github.com/magento/magento2/tree/2.4/setup/performance-toolkit
+```
+
+```bash
+setup:db:status
+# 检查数据结构或数据是否满足升级
+bin/magento setup:db:status
+All modules are up to date.
+```
+
+```bash
+setup:db-schema:upgrade
+# 安装和升级数据结构 DB schema
+bin/magento setup:db-schema:upgrade
+```
+
+```bash
+setup:db-data:upgrade
+# 安装和升级数据库数据 
+bin/magento setup:db-data:upgrade
+```
+
+```bash
+setup:db-declaration:generate-patch
+# 生成patch补丁并放在指定文件夹
+bin/magento setup:db-declaration:generate-patch
+Arguments:
+  module                         Module name
+  patch                          Patch name
+
+```
+
+```bash
+setup:db-declaration:generate-whitelist
+#  Generate whitelist of tables and columns that are allowed to be edited by declaration installer
+# 生成声明安装程序允许编辑的表和列的白名单
+bin/magento setup:db-declaration:generate-whitelist
+```
+
+```bash
+setup:store-config:set
+# Installs the store configuration. Deprecated since 2.2.0. Use config:set instead
+```
+
+```bash
+setup:backup
+# 
+bin/magento setup:backup
+Options:
+      --code                                     Take code and configuration files backup (excluding temporary files)
+      --media                                    Take media backup
+      --db                                       Take complete database backup
+      --magento-init-params=MAGENTO-INIT-PARAMS  Add to any command to customize Magento initialization parameters
+                                                 For example: "MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache"
+
+
+bin/magento setup:backup --db
+Enabling maintenance mode
+DB backup is starting...
+Backup functionality is disabled
+Disabling maintenance mode
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
+```
+
+```bash
+
+# 
+bin/magento 
 ```
 
 ```bash
