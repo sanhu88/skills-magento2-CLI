@@ -1264,16 +1264,30 @@ Backup functionality is disabled
 Disabling maintenance mode
 ```
 
-```bash
+## store
 
-# 
-bin/magento 
+```bash
+store:list
+# 表格方式列出所有stores
+bin/magento store:list
++----+------------+----------+--------------------+---------+------------+-----------+
+| ID | Website ID | Group ID | Name               | Code    | Sort Order | Is Active |
++----+------------+----------+--------------------+---------+------------+-----------+
+| 1  | 1          | 1        | Default Store View | default | 0          | 1         |
+| 0  | 0          | 0        | Admin              | admin   | 0          | 1         |
++----+------------+----------+--------------------+---------+------------+-----------+
 ```
 
 ```bash
-
-# 
-bin/magento 
+store:website:list
+# 表格方式列出所有website
+bin/magento store:website:list
++----+------------------+--------------+-------+------------+------------+
+| ID | Default Group Id | Name         | Code  | Sort Order | Is Default |
++----+------------------+--------------+-------+------------+------------+
+| 0  | 0                | Admin        | admin | 0          | 0          |
+| 1  | 1                | Main Website | base  | 0          | 1          |
++----+------------------+--------------+-------+------------+------------+
 ```
 
 ```bash
