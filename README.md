@@ -1094,16 +1094,18 @@ sampledata:deploy
 bin/magento sampledata:deploy
 ```
 
-```bash
+## security
 
-# 
-bin/magento 
+```bash
+security:recaptcha:disable-for-user-forgot-password
+# 关闭admin找回密码的验证码
+bin/magento security:recaptcha:disable-for-user-forgot-password
 ```
 
 ```bash
-
-# 
-bin/magento 
+security:recaptcha:disable-for-user-login 
+# 关闭admin登陆的验证码
+bin/magento security:recaptcha:disable-for-user-login 
 ```
 
 ```bash
