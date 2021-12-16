@@ -540,6 +540,12 @@ Configuration path for example group/section/field_name
 config:set
 # 改变系统设定，形参 "path, value"
 bin/magento config:set
+
+php bin/magento config:set web/cookie/cookie_domain NULL
+php bin/magento config:set web/unsecure/base_url http://www.yoursite.com/
+php bin/magento config:set web/secure/base_url https://www.yoursite.com/
+php bin/magento config:set web/secure/use_in_frontend 1
+php bin/magento config:set web/secure/use_in_adminhtml 1
 ```
 
 ## cron
