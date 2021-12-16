@@ -1291,21 +1291,47 @@ bin/magento store:website:list
 ```
 
 ```bash
-
-# 
-bin/magento 
+theme:uninstall
+# 卸载主题，形参主题名 举例frontend/Magento/blank
+bin/magento theme:uninstall
+bin/magento theme:uninstall frontend/Magento/blank
+Unable to uninstall. Please resolve the following issues:
+frontend/Magento/blank is a parent of physical theme. Parent themes cannot be uninstalled.
+frontend/Magento/blank has the following dependent package(s):
+        magento/product-community-edition
+        magento/theme-frontend-luma
 ```
 
 ```bash
-
-# 
-bin/magento 
+varnish:vcl:generate
+# Generates Varnish VCL and echos it to the command line
+bin/magento varnish:vcl:generate
 ```
 
 ```bash
+vertex:tax:warm-wsdl-cache 
+# Execute WSDL Cache Warming
+bin/magento vertex:tax:warm-wsdl-cache 
+```
 
-# 
-bin/magento 
+## yotpo
+
+```bash
+yotpo:reset 
+# 重置Yotpo 同步标签、配置
+bin/magento yotpo:reset 
+```
+
+```bash
+yotpo:sync
+# 手动同步Yotpo
+bin/magento yotpo:sync
+```
+
+```bash
+yotpo:update-metadata
+# 手动发送元数据给Yotpo
+bin/magento yotpo:update-metadata
 ```
 
 ````bash
