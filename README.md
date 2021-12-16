@@ -935,6 +935,32 @@ maintenance:disable
 bin/magento maintenance:disable
 ```
 
+## media
+
+```bash
+media-content:sync
+# Synchronize content with assets 同步内容与资源
+bin/magento media-content:sync
+Synchronizing content with assets...
+Completed content synchronization.
+```
+
+```bash
+media-gallery:sync
+# 在数据库中同步媒体存储和媒体资源
+bin/magento media-gallery:sync
+Synchronizing assets information from media storage to database...
+Completed assets synchronization.
+```
+
+
+
+```bash
+
+# 
+bin/magento 
+```
+
 ```bash
 
 # 
