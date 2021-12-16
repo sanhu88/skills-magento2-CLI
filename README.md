@@ -1003,21 +1003,69 @@ Options:
 ```
 
 ```bash
+newrelic:create:deploy-marker 
+# Check the deploy queue for entries and create an appropriate deploy marker.
+# 检查部署队列中的条目，并创建一个适当的部署标记。
+bin/magento newrelic:create:deploy-marker 
+## New Relic是一种软件分析服务，可帮助您分析和改进应用程序交互
+```
 
-# 
-bin/magento 
+## queue
+
+```bash
+queue:consumers:list
+# 列出MessageQueue 消费者
+bin/magento queue:consumers:list
+product_action_attribute.update
+product_action_attribute.website.update
+media.storage.catalog.image.resize
+exportProcessor
+inventory.source.items.cleanup
+inventory.mass.update
+inventory.reservations.cleanup
+inventory.reservations.update
+inventory.reservations.updateSalabilityStatus
+inventory.indexer.sourceItem
+inventory.indexer.stock
+media.content.synchronization
+media.gallery.renditions.update
+media.gallery.synchronization
+codegeneratorProcessor
+sales.rule.update.coupon.usage
+async.operations.all
 ```
 
 ```bash
+queue:consumers:start
+# 形参 consumer
+bin/magento queue:consumers:start
+Help:
+  This command starts MessageQueue consumer by its name.
 
-# 
-bin/magento 
-```
+  To start consumer which will process all queued messages and terminate execution:
 
-```bash
+      bin/magento queue:consumers:start someConsumer
 
-# 
-bin/magento 
+  To specify the number of messages which should be processed by consumer before its termination:
+
+      bin/magento queue:consumers:start someConsumer --max-messages=50
+
+  To specify the number of messages per batch for the batch consumer:
+
+      bin/magento queue:consumers:start someConsumer --batch-size=500
+
+  To specify the preferred area:
+
+      bin/magento queue:consumers:start someConsumer --area-code='adminhtml'
+
+  To do not run multiple copies of one consumer simultaneously:
+
+      bin/magento queue:consumers:start someConsumer --single-thread'
+
+  To save PID enter path (This option is deprecated, use --single-thread instead):
+
+      bin/magento queue:consumers:start someConsumer --pid-file-path='/var/someConsumer.pid'
+
 ```
 
 ````bash
